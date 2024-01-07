@@ -1,0 +1,186 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* dm-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/dm-sans-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* dm-sans-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/dm-sans-v14-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+
+
+
+body {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    position: relative;
+    transition: 5s;
+    border-radius: 8px;
+    --mycolor1: black;
+    --mycolor2: white;
+}
+
+:root {
+    
+}
+
+body.dark {
+    --mycolor1: white;
+    --mycolor2: black;
+}
+
+
+html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after{
+    box-sizing: inherit;
+  }
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* ХЕДЕР */
+header {
+    max-width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--mycolor2);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 7vh;
+    flex-shrink: 0;
+    border: 2px solid var(--mycolor1); /* Цвет и толщина рамки */
+    border-radius: 12px;
+    padding: 10px; /* Отступ внутри рамки */
+  }
+  
+nav ul {
+list-style: none;
+display: flex;
+}
+
+nav ul li {
+    transition: 0.5s;
+margin: auto;
+margin-right: 20px;
+text-decoration: none;
+color: var(--mycolor1);                 
+}
+
+
+nav ul li a {
+    transition: 0.5s;
+    text-decoration: none;
+    color: var(--mycolor1);
+    font-size: 150%;                     
+}
+
+
+
+.btn1 {
+    transition: 0.5s;
+    background-color: var(--mycolor2);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+.btn1:hover {
+	color: black;
+	box-shadow: inset 0 0 0 2px var(--mycolor1);
+    transition: 1s;
+
+}
+
+
+/* ОСНОВА */
+.container {
+    transition: 0.3s;
+    border-radius: 8px;
+    height: 93vh;
+    max-width: 75%;
+    margin: 0 auto;
+    background-color: var(--mycolor2);
+    transition: 1s;
+
+}
+.container1 {
+position: absolute;
+top: 0;
+width: 12.5%;
+max-width: 12.5%;
+height: 100vh;
+}
+.container2 {
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12.5%;
+    max-width: 12.5%;
+    
+    height: 100vh;
+}
+
+.levo p{
+    font-size: 1000%;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.pravo {
+    font-size: 1000%;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}

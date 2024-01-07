@@ -1,0 +1,258 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    src: url('fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+/* Начало контента */
+
+header {
+	min-width: 1900px;
+	min-height: 900px;
+	flex-shrink: 0;
+	background-image: linear-gradient(#EDA418, #EDA41800);
+}
+
+nav ul li {
+	width: 151.502px;
+	height: 37.472px;
+	flex-shrink: 0;
+}
+
+nav ul li a {
+	color: #000;
+	font-family: "Montserrat";
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-decoration: none;
+}
+
+#navUrl1{
+	font-weight: 700;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+nav ul {
+	padding-top: 117px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 147.5px;
+}
+
+#bucked {
+	margin-left: 48.5px;
+	padding-top: 101px;
+	margin-right: 168px;
+}
+
+#imgLogo {
+	padding-top: 105px;
+}
+
+#navLi2 {
+	margin-left: 66.5px;
+	margin-right: 30.5px;
+}
+
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 290px;
+}
+
+.contentText {
+	width: 610px;
+	padding-top: 189.5px;
+	color: #000;
+	font-family: "Montserrat";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;	
+}
+
+.contentText p:first-child {
+	color: #000;
+	font-family: "Montserrat";
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+}
+
+.contentText p{
+	padding-bottom: 29px;
+}
+
+.contentImg{
+	padding-top: 39.5px;
+}
+
+
+/* MAIN */
+
+main {
+	min-height: 900px;
+	width: 1600px;
+	margin: auto;
+	text-align: center;
+}
+
+main ul li p {
+	color: #000;
+	font-family: Montserrat;
+	font-size: 35px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+main ul li img {
+	width: 450px;
+	height: 300px;
+	flex-shrink: 0;
+	border-radius: 50px;
+}
+
+main ul {
+	padding-left: 81px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 46px 38px;
+}
+
+main h1 {
+	color: #000;
+	font-family: Montserrat;
+	font-size: 45px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-bottom: 38px;
+}
+
+/* FOOOTERR */
+
+footer{
+	width: 1900px;
+	min-height: 450px;
+	flex-shrink: 0;
+	background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #EDA61D 100%);
+}
+
+.footerContent{
+	width: 1600px;
+	margin: auto;
+	padding-top: 157px;
+}
+
+.footerContent ul {
+	display: flex;
+	justify-content: center;
+	gap: 101px;
+	margin-bottom: 45px;
+}
+
+.footerContent ul li{
+	color: #000;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.footerContent ul li:first-child{
+	font-weight: 500;
+}
+
+.footerContent p{
+	color: #000;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	display: block;
+	text-align: center;
+}
+
+#footer1p {
+	margin-bottom: 24px;
+  }
+
+.footerContent a {
+	display: inline-block;
+}
+
+
+.footerImg{
+	display: block;
+	position: relative;
+	
+}
+
+#footeImg1 img{
+	position: absolute;
+	left: 744px;
+	top: 22px;
+}
+
+#footeImg2 img{
+	position: absolute;
+	left: 800px;
+	top: 17px;
+}

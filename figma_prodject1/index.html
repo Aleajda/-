@@ -1,43 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="header">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
         <div class="wrapper">
-            <div class="header_wrapper">
-                <div class="header_logo">
-                    <a href="#" class="headerlogo_link">
-                        <img src="img/svg/odigo-Logo.svg" alt="Тут должно быть лого">
-                    </a>
+            <div class="frame">
+                <div class="header">
+                    <div class="logo">
+                        <a href="#"><img src="img/svg/IMAGE.svg" alt="#" /></a>
+                    </div>
                 </div>
-    
-                <nav class="header_nav">
-                    <ul class="header_list">
-                        <li class="header_item">
-                            <a href="#" class="nav_link">Articles</a>
-                        </li>
-                        <li class="header_item">
-                            <a href="#" class="nav_link">Locations</a>
-                        </li>
-                        <li class="header_item">
-                            <a href="#" class="nav_link">Videos</a>
-                        </li>
-                        <li class="header_item">
-                            <a href="#" class="nav_link">Sign in</a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="header_nav">
+                    <nav>
+                        <ul class="list">
+                            <li class="firstli">
+                                <a class="ha" href="#" style="color: #118da8"
+                                    >Home</a
+                                >
+                            </li>
+                            <li><a class="ha" href="#episodes">Episodes</a></li>
+                            <li><a class="ha" href="#about">About</a></li>
+                            <li class="lastli">
+                                <a class="ha" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
-    </header>
 
-    <main class="main">
-        <section class="intro"></section>
-    </main>
-</body>
+        <!-- Конец хедара -->
+
+        <div class="container">
+            <div class="imges">
+                <img id="osnov" src="img/svg/osnov.svg" alt="" />
+                <img id="ugol" src="img/svg/ugol.svg" alt="" />
+            </div>
+            <div class="container_text">
+                <div class="osn_text">
+                    <p>Take your podcast to the</p>
+                </div>
+                <div class="dop_text">
+                    <div class="dop_text1">
+                        <div class="txt_nadimg">
+                            <p>next</p>
+                        </div>
+                        <img class="img_podtxt" src="img/svg/line.svg" alt="" />
+                    </div>
+                    <div class="dop_text2">
+                        <p>level</p>
+                    </div>
+                </div>
+                <div class="icons">
+                    <p class="icon_text">Listen on</p>
+                    <div class="icons_container">
+                        <a href="#"><img src="img/svg/icon.svg" alt="" /></a>
+                        <a href="#"><img src="img/svg/icon1.svg" alt="" /></a>
+                        <a href="#"><img src="img/svg/icon2.svg" alt="" /></a>
+                        <a href="#"><img src="img/svg/icon3.svg" alt="" /></a>
+                        <a href="#"><img src="img/svg/icon4.svg" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- конец интро -->
+
+        <div class="episodes" id="episodes">
+            <div class="view">
+                <div class="viewtext">
+                    <p>Latest episodes</p>
+                </div>
+                <div class="button">
+                    <button><p>View all episodes</p></button>
+                </div>
+            </div>
+            <div class="epi1">
+                <div class="epi_img">
+                    <img src="img/epi1.png" alt="" />
+                </div>
+                <div class="frame_aimage">
+                    <div class="knopka1">
+                        <div class="gear">
+                            <a href="#">Gear</a>
+                        </div>
+                    </div>
+
+                    <div class="doubletext">
+                        <div class="text1">Episode</div>
+                        <div class="text2">3</div>
+                    </div>
+
+                    <div class="textpodepi1">
+                        Should you get outboard audio gear?
+                    </div>
+
+                    <div class="textpodpodepi1">
+                        Is hardware really worth it when it comes to podcasting?
+                        The answer is...it depends. Here’s our reasons on why
+                        you might want to consider picking something up.
+                    </div>
+
+                    <div class="podpodknopka">
+                        <div class="details">
+                            <button><p>View Episode Details</p></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="epi2">
+                <div class="epi_img">
+                    <img src="img/epi2.png" alt="" />
+                </div>
+                <div class="frame_aimage">
+                    <div class="knopka2">
+                        <div class="tips">
+                            <a href="#">Tips & Tricks</a>
+                        </div>
+                    </div>
+
+                    <div class="doubletext">
+                        <div class="text1">Episode</div>
+                        <div class="text2">2</div>
+                    </div>
+
+                    <div class="textpodepi2">
+                        Mic tricks to take you to the next level
+                    </div>
+
+                    <div class="textpodpodepi2">
+                        Stop rolling with those default settings on your mic.
+                        These small tweaks will take you from sounding good to
+                        great.
+                    </div>
+
+                    <div class="podpodknopka">
+                        <div class="details">
+                            <button><p>View Episode Details</p></button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="epi3">
+                <div class="epi_img">
+                    <img src="img/epi3.png" alt="" />
+                </div>
+                <div class="frame_aimage">
+                    <div class="knopka1">
+                        <div class="gear">
+                            <a href="#">Gear</a>
+                        </div>
+                    </div>
+
+                    <div class="doubletext">
+                        <div class="text1">Episode</div>
+                        <div class="text2">1</div>
+                    </div>
+
+                    <div class="textpodepi3">
+                        The best microphone under $200
+                    </div>
+
+                    <div class="textpodpodepi3">
+                        With so many microphones on the market, how are you
+                        supposed to know what’s the best? Take a look at our top
+                        picks.
+                    </div>
+
+                    <div class="podpodknopka">
+                        <div class="details">
+                            <button><p>View Episode Details</p></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- конец эпизодов -->
+
+
+        <div class="jacob_frame" id="about">
+            <div class="jacob_podframe">
+                <div class="jacob_text">
+                    <div class="krug">
+                        <div class="strelka">
+                            <img src="img/strelka.png" alt="">
+                        </div>
+                    </div>
+                    <div class="meet">
+                        Meet your host
+                    </div>
+                    <div class="paulaner">
+                        Jacob Paulaner
+                    </div>
+                    <div class="jacob_doptext">
+                        <p>Jacob has a background in audio engineering, and has been podcasting since the early days.</p>
+                        <p>He’s here to help you level up your game by sharing everything he’s learned along the way.</p>
+                    </div>
+                </div>
+                <div class="jacob_img">
+                    <img src="img/jacob.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- end of jacob -->
+
+        <div class="subscribe">
+            <div class="sub_frame">
+                <div class="sub_ugol">
+                    <img src="img/svg/ugol2.svg" alt="">
+                </div>
+                <div class="sub_textframe">
+                    <p>Email Newsletter</p>
+                    <p>Subscribe for updates</p>
+                </div>
+                <div class="sub_inputframe">
+                    <div class="input1">
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="input2">
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <button>
+                        <p>Submit</p>
+                    </button>
+                </div>    
+            </div>
+        </div>
+
+        <!-- end of input -->
+
+        <div class="otziv_frame">
+            <div class="otziv_frame2">
+                <div class="otziv1">
+                    <div class="zvezdi">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                    </div>
+                    <div class="otziv_text">
+                        <p class="otziv_text1">I can’t recommend this podcast enough</p>
+                    </div>
+                    <div class="avtor">
+                        <p class="avtor1">Betty Lacey</p>
+                    </div>
+                </div>
+                <div class="otziv1">
+                    <div class="zvezdi">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                    </div>
+                    <div class="otziv_text">
+                        <p class="otziv_text2">Jacob is the best in the business</p>
+                    </div>
+                    <div class="avtor">
+                        <p class="avtor2">Adam Driver</p>
+                    </div>
+                </div>
+                <div class="otziv1">
+                    <div class="zvezdi">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                    </div>
+                    <div class="otziv_text">
+                        <p class="otziv_text3">A wealth of audio knowledge</p>
+                    </div>
+                    <div class="avtor">
+                        <p class="avtor3">Marcus Brown</p>
+                    </div>
+                </div>
+                <div class="otziv2">
+                    <div class="zvezdi">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                    </div>
+                    <div class="otziv_text">
+                        <p class="otziv_text4">Every episode is a gem!</p>
+                    </div>
+                    <div class="avtor">
+                        <p class="avtor4">Jessica Knowl</p>
+                    </div>
+                </div>
+                <div class="otziv2">
+                    <div class="zvezdi">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                    </div>
+                    <div class="otziv_text">
+                        <p class="otziv_text5">Whoa whoa, let me take some notes!</p>
+                    </div>
+                    <div class="avtor">
+                        <p class="avtor5">Scott Adams</p>
+                    </div>
+                </div>
+                <div class="otziv2">
+                    <div class="zvezdi">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                        <img src="img/svg/zvzd.svg" alt="">
+                    </div>
+                    <div class="otziv_text">
+                        <p class="otziv_text6">I’ve upped my game considerably since I started listening</p>
+                    </div>
+                    <div class="avtor">
+                        <p class="avtor6">Steven Blast</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of otziv -->
+        <div class="endofpageframe" id="contact">
+            <div class="endofpage">
+                <div class="castway">
+                    <a href=""><img src="img/svg/castway.svg" alt=""></a>
+                    <div class="frameforicons">
+                        <a href=""><img src="img/svg/endi1.svg" alt=""></a>
+                        <a href=""><img src="img/svg/endi2.svg" alt=""></a>
+                        <a href=""><img src="img/svg/endi3.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <a href="#"><p>Home</p></a>
+                    <a href="#about"><p>About</p></a>
+                    <a href="#episodes"><p>Episodes</p></a>
+                    <a href="#contact"><p>Contact</p></a>
+                </div>
+                <div class="instructions">
+                    <a href=""><p>Style Guide</p></a>
+                    <a href=""><p>Instructions</p></a>
+                    <a href=""><p>Changelog</p></a>
+                    <a href=""><p>Credit</p></a>
+                    <a href=""><p>Powered by Webflow</p></a>
+                    <a href=""><p>Licenses</p></a>
+                </div>
+                <div class="end_icons">
+                    <a href="#"><img src="img/svg/icon.svg" alt="" /></a>
+                    <a href="#"><img src="img/svg/icon1.svg" alt="" /></a>
+                    <a href="#"><img src="img/svg/icon2.svg" alt="" /></a>
+                    <a href="#"><img src="img/svg/icon3.svg" alt="" /></a>
+                    <a href="#"><img src="img/svg/icon4.svg" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

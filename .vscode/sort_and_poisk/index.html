@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="frame">
+            <div class="header_nav">
+                <nav>
+                    <ul class="list">
+                        <li class="firstli">
+                            <a class="ha" href="#cont1" style="color: #118da8"
+                                >Главная</a
+                            >
+                        </li>
+                        <li><a class="ha" href="#cont2">Сортировка</a></li>
+                        <li><a class="lastli" href="#cont3">Поиск</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container" id="cont1" style="background-color: #191919">
+            <div class="privet">
+                <p>Сортировка и поиск элеметов массива различными методами</p>
+            </div>
+        </div>
+        <div class="container" id="cont2" style="background-color: #191919">
+            <div class="obertka">
+                <p class="cont_sort">Сортировка</p>
+            </div>
+            <div class="sortirovka">
+                <div class="viborMetodaSort">
+                    <button id="my-button" class="selected">
+                        Выберите сортировку
+                    </button>
+                    <div class="days">
+                        <button class="day" data-value="Пузырьком">
+                            Пузырьком
+                        </button>
+                        <button class="day" data-value="Выбором">
+                            Выбором
+                        </button>
+                        <button class="day" data-value="Вставками">
+                            Вставками
+                        </button>
+                        <button class="day" data-value="Шелла">Шелла</button>
+                        <button class="day" data-value="Быстрая">
+                            Быстрая
+                        </button>
+                    </div>
+                </div>
+                <p class="p1">Рандомное заполнение</p>
+                <p class="p2">Введите количество элементов</p>
+                <input type="text" class="kolel" id="kolel1" />
+                <div class="switch-btn" id="swbtn1"></div>
+                <textarea name="" id="inputarea" class="input_in"></textarea>
+                <button id="startsort">Сортировать</button>
+            </div>
+            <div class="teoria">
+                <ul>
+                    <li>
+                        Сортировка пузырьком: Постоянное сравнение и обмен пар
+                        соседних элементов до полной сортировки.
+                    </li>
+                    <li>
+                        Сортировка вставками: Вставка каждого элемента на свое
+                        место в уже отсортированную часть массива.
+                    </li>
+                    <li>
+                        Сортировка Шелла: Использование больших шагов для
+                        сравнения и обмена элементов, постепенное уменьшение
+                        шагов до 1.
+                    </li>
+                    <li>
+                        Сортировка выбором: Последовательный выбор наименьшего
+                        элемента и его перемещение на первое место.
+                    </li>
+                    <li>
+                        Быстрая сортировка: Разделение массива на подмассивы,
+                        перемещение элементов относительно опорного элемента до
+                        полной сортировки.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container" id="cont3" style="background-color: #191919">
+            <div class="obertkaP">
+                <p class="cont_poisk">Поиск</p>
+            </div>
+            <div class="poisk">
+                <div class="viborMetodaPoiska">
+                    <button id="my-button2" class="selected">
+                        Выберите поиск
+                    </button>
+                    <div class="days2">
+                        <button class="day2" data-value="Последовательный">
+                            Последовательный
+                        </button>
+                        <button class="day2" data-value="Двоичный">
+                            Двоичный
+                        </button>
+                    </div>
+                </div>
+                <p class="p1P">Рандомное заполнение</p>
+                <p class="p2P">Введите количество элементов</p>
+                <input type="text" class="kolelP" id="kolel2" />
+                <div class="switch-btn" id="swbtn2"></div>
+                <textarea name="" id="inputarea2" class="input_inP"></textarea>
+                <p class="p3P">Введите элемент для поиска</p>
+                <input type="text" class="element" id="elm" />
+                <button id="startpoisk">Искать</button>
+                <button id="Show">Показать массив</button>
+            </div>
+            <div class="teoria2">
+                <ul>
+                    <li>
+                        Последовательный поиск: Это метод поиска элемента в
+                        массиве, при котором элементы перебираются
+                        последовательно до тех пор, пока не будет найден искомый
+                        элемент или не будут пройдены все элементы массива.
+                    </li>
+                    <li>
+                        Поиск двоичный: Это метод поиска элемента в
+                        отсортированном массиве, при котором массив делится
+                        пополам и сравнивается средний элемент с искомым. Если
+                        средний элемент больше искомого, то поиск продолжается в
+                        левой половине массива, иначе - в правой. Этот процесс
+                        повторяется до тех пор, пока искомый элемент не будет
+                        найден или не останется элементов для проверки. Этот
+                        метод работает быстрее, чем последовательный поиск, но
+                        требует отсортированного массива.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container" id="cont3" style="background-color: #191919">
+            <p id="longP">Введите ширину</p>
+            <input type="number" name="" id="long">
+            <div class="bloks" id="bloks">
+                
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
