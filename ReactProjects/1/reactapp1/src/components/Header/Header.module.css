@@ -1,0 +1,15 @@
+.header {
+    padding-left: 0px;
+    grid-area: h;
+    background-color: white;
+    display: flex;
+    gap: 30px;
+  }
+  .icon {
+    width: 60px;
+  }
+.name{
+    margin: auto 0;
+    font-size: 40px;
+    font-weight: 500;
+}

@@ -1,0 +1,11 @@
+import s from "./Header.module.css";
+
+const Header = () => {
+    return (
+        <header className={s.header}>
+        <img className={s.icon} src='https://i.pinimg.com/originals/10/35/6c/10356c8e0a85a44788d258286547b132.gif'></img>
+        <div className={s.name}>MEOUWCHAT</div>
+        </header> 
+    );
+}
+export default Header;
