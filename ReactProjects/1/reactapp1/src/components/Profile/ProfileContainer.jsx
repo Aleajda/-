@@ -1,42 +1,35 @@
 import Profile from "./Profile";
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
-import { setUserProfile } from "../../redux/profileReducer";
+import { setProfile, getStatus, updateStatus } from "../../redux/profileReducer";
 import { withRouter } from "../../withRouter";
-import { profileAPI } from "../../api/api";
+import { Navigate } from "react-router-dom";
+import { withAuthRedirect } from "../hoc/withAuthRedirect";
+import { compose } from "redux";
 
-class ProfileContainer extends React.Component{
-    componentDidMount() {
-        this.loadProfileData();
-    }
+const ProfileContainer = (props) =>{
+    useEffect(() =>{
+        loadProfileData();
+    }, [props.params.userId]);
 
-    componentDidUpdate(prevProps) {
-        if (this.props.params.userId !== prevProps.params.userId) {
-            this.loadProfileData();
-        }
+    let loadProfileData = () => {
+        let userId = props.params.userId ?? props.myId;
+        if (!userId){props.history.push("/login")}
+        props.setProfile(userId);
+        props.getStatus(userId);
     }
-
-    loadProfileData = () => {
-        let userId = this.props.params.userId ?? 30757;
-        profileAPI.getProfile(userId).then(data => {
-            this.props.setUserProfile(data);
-        });
-    }
-    render(){
-        return (
-            <Profile {...this.props}/>
-        );
-    }
+    return (
+        <Profile {...props} updateStatus = {props.updateStatus}/>
+    );
 };
 
 
-let mapStateToProps = (state) =>{
-    return {
-        profile: state.ProfilePage.profile
-    }
-}
+let mapStateToProps = (state) => ({
+    profile: state.ProfilePage.profile,
+    status: state.ProfilePage.status,
+    myId: state.Auth.id,
+    isAuth: state.Auth.isAuth
+})
 
-let WithUrlDataProfileContainer = withRouter(ProfileContainer);
-
-export default connect(mapStateToProps, {setUserProfile})(WithUrlDataProfileContainer);
+export default compose(connect(mapStateToProps, { setProfile, getStatus, updateStatus }), withAuthRedirect, withRouter)(ProfileContainer); 

@@ -41,15 +41,37 @@ export const profileAPI = {
                 return response.data;
             })
         );
+    },
+    getStatus(userId){
+        return(
+            instance.get(`profile/status/${userId}`).then(response => {
+                return response.data;
+            })
+        );
+    },
+    updateStatus(status){
+        return(
+            instance.put(`profile/status`, {status: status})
+        )
     }
 }
 
-export const headerAPI = {
+export const AuthAPI = {
     authMe(){
         return(
             instance.get(`auth/me`).then(response =>{
                 return response.data;
             })  
+        );
+    },
+    logMe(login, password, rememberMe = false){
+        return(
+            instance.post("auth/login", {email: login, password: password, rememberMe: rememberMe})
+        );
+    },
+    logoutMe(){
+        return(
+            instance.delete("auth/login")
         );
     }
 }

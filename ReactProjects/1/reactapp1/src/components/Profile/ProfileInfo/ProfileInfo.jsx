@@ -1,6 +1,9 @@
-import Preloader from "../../Preloader/Preloader";
+import Preloader from "../../additional/Preloader/Preloader";
 import s from "./ProfileInfo.module.css";
 import userPhoto from "../../../images/img.jpg"
+import ProfileStatus from "./ProfileStatus";
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
+import React from "react";
 
 const ProfileInfo = (props) => {
     if (!props.profile){
@@ -11,10 +14,6 @@ const ProfileInfo = (props) => {
     else{
         return (
             <div>
-                <img
-                    className={s.contentImg}
-                    src="https://airpano.ru/files/360video/vr-sahara/images/image1.jpg"
-                ></img>
                 <div className={s.ava}>
                     <img
                         className={s.avaImg}
@@ -23,9 +22,10 @@ const ProfileInfo = (props) => {
                     />
                     <div className={s.discription}>
                         <h1>{props.profile.fullName}</h1>
-                        <p>{props.profile.aboutMe}</p>
+                        {/* <p>{props.profile.aboutMe}</p> */}
                     </div>
                 </div>
+                <ProfileStatusWithHooks status = {props.status} updateStatus = {props.updateStatus}/>
                 <div>
                     {props.profile.lookingForAJob ? "Ищет работу" : "Не ищет работу"}
                 </div>

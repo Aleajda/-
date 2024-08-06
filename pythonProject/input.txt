@@ -1,0 +1,35 @@
+start
+You wake up in a mysterious cave. There are two paths ahead: a dark tunnel or a narrow passage. Which way do you choose?
+dark tunnel
+You find a hidden treasure room! You become rich and live happily ever after.
+end
+
+start
+You find yourself in a dense jungle. The sounds of wild animals echo around you. Do you continue forward or try to climb a tree for safety?
+continue forward
+You stumble upon an ancient temple and unlock its secrets. You gain mystical powers and become a legend.
+end
+
+start
+You emerge in a vast desert. The scorching sun beats down on you. Will you search for an oasis or follow distant footprints?
+search for an oasis
+You find an oasis and quench your thirst. You are rescued by a passing caravan and journey to new lands.
+end
+
+start
+You enter a haunted mansion. Eerie whispers fill the air. Do you explore the basement or ascend the creaky stairs?
+explore the basement
+You uncover a dark secret and awaken an evil spirit. You become trapped in the mansion forever.
+end
+
+start
+You arrive at a crossroads with multiple paths. Will you take the road less traveled or follow the well-worn path?
+road less traveled
+You discover hidden wonders and embark on a grand adventure. Your name is remembered for generations.
+end
+
+start
+You step into a magical forest filled with glowing mushrooms. Do you follow the fireflies or listen to the rustling leaves?
+follow the fireflies
+The fireflies lead you to a fairy kingdom where you are granted eternal happiness. You live in harmony with nature.
+end

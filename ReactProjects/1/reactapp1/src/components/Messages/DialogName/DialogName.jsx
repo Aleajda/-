@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import s from "../Massages.module.css";
+import React from "react";
 
 const DialogName = (props) => {
     return (

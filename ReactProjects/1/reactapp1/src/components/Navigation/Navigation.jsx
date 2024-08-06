@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import s from "./Navigation.module.css";
 import Friends from "./Friends/Friends";
+import React from "react";
+import { connect } from "react-redux";
 
 
 const Navigation = (props) => {
@@ -19,4 +21,7 @@ const Navigation = (props) => {
         
     );
 }
-export default Navigation;
+const mapStateToProps = (state) =>({
+    state: state.Navigation
+})
+export default connect(mapStateToProps,{})(Navigation);

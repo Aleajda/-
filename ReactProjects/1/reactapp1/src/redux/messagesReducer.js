@@ -1,4 +1,3 @@
-const add_message_text = "ADD-MESSAGE-TEXT";
 const add_message = "ADD-MESSAGE";
 
 
@@ -8,7 +7,6 @@ let defaultState = {
         { id: "2", message: "Hi i am a BROWN CAT" },
         { id: "3", message: "Hi i am a SMALL CAT" },
     ],
-    NewMessageText: "",
     dialogsData: [
         { id: "1", name: "TIGER CAT" },
         { id: "2", name: "BROWN CAT" },
@@ -22,29 +20,20 @@ const messagesReducer = (state = defaultState, action) =>{
         case add_message:
             let newMessage = {
                 id: "0",
-                message: state.NewMessageText
+                message: action.text
                 
             }
             stateCopy.messagesData = [...state.messagesData];
             stateCopy.messagesData.push(newMessage);
-            stateCopy.NewMessageText = "";
             return stateCopy;
 
-        case add_message_text:{
-            stateCopy.NewMessageText = action.currentText;
-            return stateCopy;
-        }
         default:
             return stateCopy; 
     }
 }
 
-export const addMessageTextActionCreator = (text) =>{
-    return { type: add_message_text, currentText: text};
-}
-
-export const addMessageActionCreator = () =>{
-    return {type: add_message};
+export const addMessageActionCreator = (text) =>{
+    return {type: add_message, text};
 }
 
 export default messagesReducer;

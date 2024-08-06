@@ -1,49 +1,35 @@
-import React from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import Users from "./Users";
-import { Follow, setUsers, Unfollow, clearUsers, setCurrentPage, setTotalUsersCount, setUsersAreLoading } from "../../redux/usersReducer";
+import { follow, setUsers, unfollow, clearUsers, setCurrentPage, setTotalUsersCount, setUsersAreLoading, setFollowingInProgress, getUsers } from "../../redux/usersReducer";
 import { connect } from "react-redux";
-import Preloader from "../Preloader/Preloader";
-import { usersAPI } from "../../api/api";
+import Preloader from "../additional/Preloader/Preloader";
+import { withAuthRedirect } from "../hoc/withAuthRedirect";
+import { compose } from "redux";
 
 
 
 
-class UsersAPI extends React.Component{
+const UsersContainer = (props) =>{
 
-    
-    componentDidMount(){
-        this.props.setUsersAreLoading(true);
-        usersAPI.getUsers(this.props.currentPage, this.props.pageSize).then(data =>{
-            this.props.setUsers(data.items);
-            this.props.setTotalUsersCount(data.totalCount);
-            this.props.setUsersAreLoading(false);
-        });
-    }
-    componentWillUnmount(){
-        this.props.clearUsers();
-    }
+    useEffect(() =>{
+        props.getUsers(props.currentPage, props.pageSize);
+        return () =>{
+            props.clearUsers();
+        }
+    }, []);
 
-
-    onPageChanged = (PageNumber) => {
-        this.props.setCurrentPage(PageNumber);
-        this.props.clearUsers();
-        this.props.setUsersAreLoading(true);
-        usersAPI.getUsers(PageNumber, this.props.pageSize).then(data =>{
-                this.props.setUsers(data.items);
-                this.props.setUsersAreLoading(false);
-            });
+    let onPageChanged = (PageNumber) => {
+        props.setCurrentPage(PageNumber);
+        props.clearUsers();
+        props.getUsers(PageNumber, props.pageSize);
     }
 
-
-    render() {
-        return (
-            <>
-                <Users {...this.props} onPageChanged={this.onPageChanged}/>
-                {this.props.isLoading ? <Preloader/> : null}
-            </>
-        ); 
-    }
+    return (
+        <>
+            <Users {...props} onPageChanged={onPageChanged}/>
+            {props.isLoading ? <Preloader/> : null}
+        </>
+    ); 
 }
 
 
@@ -53,13 +39,11 @@ let mapStateToProps = (state) =>{
         pageSize: state.Users.pageSize,
         totalUsersCount: state.Users.totalUsersCount,
         currentPage: state.Users.currentPage,
-        isLoading: state.Users.isLoading
+        isLoading: state.Users.isLoading,
+        isFollowing: state.Users.isFollowing
     }
 }
 
 
 
-const UsersContainer = connect(mapStateToProps, {Unfollow, Follow, setUsers, clearUsers, setCurrentPage, setTotalUsersCount, setUsersAreLoading} )(UsersAPI);
-
-
-export default UsersContainer;
+export default compose(connect(mapStateToProps, {unfollow, follow, setUsers, clearUsers, setCurrentPage, setTotalUsersCount, setUsersAreLoading, setFollowingInProgress, getUsers} ),  withAuthRedirect)(UsersContainer);

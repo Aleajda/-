@@ -1,4 +1,5 @@
 import s from "../Massages.module.css";
+import React from "react";
 
 
 const Message = (props) =>{
